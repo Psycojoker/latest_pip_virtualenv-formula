@@ -10,8 +10,9 @@ easy_install pip:
 
 install_pip:
   cmd.wait:
-    - name: |
-      pip install -U pip
-      pip2 install --no-use-wheel -U setuptools
-      ln -s /usr/bin/pip2 /usr/bin/pip
-      pip install -U virtualenv
+    - name:
+      |
+        pip install -U pip
+        pip2 install --no-use-wheel -U setuptools
+        ln -s /usr/bin/pip2 /usr/bin/pip
+        pip install -U virtualenv
